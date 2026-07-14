@@ -88,6 +88,7 @@ div {
     animation-duration: 0.7s;
     animation-delay: 1s;
     animation-fill-mode: both;
+    margin: -10px;
 }
 
 .header {
