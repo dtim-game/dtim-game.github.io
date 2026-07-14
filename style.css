@@ -255,4 +255,5 @@ div {
 
 .gallery img {
     scroll-snap-align: start;
+    width: 80%;
 }
