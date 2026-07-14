@@ -64,12 +64,23 @@ div {
 }
 
 .block {
-    background: #333333aa;
     padding: 10px;
-    backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 10px;
     margin-bottom: 20px;
+    width: 100%;
+    animation-name: fadepro;
+    animation-duration: 0.7s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+.block::before {
+    position: absolute;
+    content: '';
+    background: #333333aa;
+    backdrop-filter: blur(20px);
+    height: 100%;
     width: 100%;
     animation-name: fadepro;
     animation-duration: 0.7s;
