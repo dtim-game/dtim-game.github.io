@@ -115,6 +115,8 @@ div {
 }
 
 .block {
+    background: #333333aa;
+    backdrop-filter: blur(20px);
     padding: 10px;
     flex-direction: column;
     padding: 10px;
@@ -124,9 +126,10 @@ div {
     animation-duration: 0.7s;
     animation-delay: 1s;
     animation-fill-mode: both;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
+/*
 .block::before {
     z-index: -1;
     position: absolute;
@@ -141,6 +144,7 @@ div {
     animation-fill-mode: both;
     margin: -10px;
 }
+*/
 
 .header {
     height: 90px;
