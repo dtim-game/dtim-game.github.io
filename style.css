@@ -76,6 +76,7 @@ div {
 }
 
 .block::before {
+    z-index: -1;
     position: absolute;
     content: '';
     background: #333333aa;
