@@ -1,9 +1,9 @@
 // Находим контейнер со слайдами
-    const slides = document.querySelector('.slides');
-    const slideCount = document.querySelectorAll('.slide').length; // Количество слайдов
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    const slider = document.querySelector('.slider');
+    var slides = $('.gallery .scroll');
+    var slideCount = $('.gallery img').length; // Количество слайдов
+    var prevButton = $('.gallery .back');
+    var nextButton = $('.next');
+    var slider = $('.gallery');
 
     let currentIndex = 0; // Текущий индекс слайда
     let autoPlayInterval; // Интервал для автопрокрутки
