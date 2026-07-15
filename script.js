@@ -19,7 +19,7 @@
             index = 0; // Если нажали "Вперед" на последнем слайде, переходим к первому
         }
         currentIndex = index;
-        slides.css("transform", "translateX(100%)"); // Смещение слайдов
+        slides.css("transform", `translateX(${-index * 100}%)`); // Смещение слайдов
     }
 
     // Обработчики кликов для кнопок
