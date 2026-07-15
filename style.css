@@ -223,6 +223,7 @@ div {
     width: 80%;
     margin: 10px auto 10px auto;
     overflow: hidden;
+    position: relative;
 }
 
 .gallery .scroll {
