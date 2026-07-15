@@ -41,5 +41,5 @@
     }
 
     startAutoPlay(); // Запускаем автопрокрутку
-    slider.addEventListener('mouseenter', stopAutoPlay); // Остановка при наведении мыши
-    slider.addEventListener('mouseleave', startAutoPlay); // Возобновление при уходе мыши
+    slider.mouseenter(stopAutoPlay); // Остановка при наведении мыши
+    slider.mouseleave(startAutoPlay); // Возобновление при уходе мыши
