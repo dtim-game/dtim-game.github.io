@@ -23,8 +23,8 @@
     }
 
     // Обработчики кликов для кнопок
-    prevButton.addEventListener('click', () => goToSlide(currentIndex - 1));
-    nextButton.addEventListener('click', () => goToSlide(currentIndex + 1));
+    prevButton.click(() => goToSlide(currentIndex - 1));
+    nextButton.click(() => goToSlide(currentIndex + 1));
 
     /**
      * Запускает автоматическую прокрутку слайдов.
