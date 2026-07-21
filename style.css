@@ -32,6 +32,10 @@
     }
 }
 
+@view-transition {
+    navigation: auto;
+}
+
 ::view-transition-old(blocks) {
     animation: fade 0.7s backwards both;
 }
