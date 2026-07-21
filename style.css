@@ -32,6 +32,14 @@
     }
 }
 
+::view-transition-old(blocks) {
+    animation: fade 0.7s backwards both;
+}
+
+::view-transition-new(blocks) {
+    animation: fade 0.7s forwards both;
+}
+
 body {
     font-family: Draconis;
     padding: 0;
@@ -100,6 +108,10 @@ div {
     margin: -10px;
 }
 */
+
+.block:not(.header .block) {
+    view-transition-name: blocks;
+}
 
 .ic {
     font-family: 'Material Symbols Rounded';
