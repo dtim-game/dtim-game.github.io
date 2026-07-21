@@ -32,18 +32,6 @@
     }
 }
 
-@view-transition {
-    navigation: auto;
-}
-
-::view-transition-old(blocks) {
-    animation: fade 0.7s backwards both;
-}
-
-::view-transition-new(blocks) {
-    animation: fade 0.7s forwards both;
-}
-
 body {
     font-family: Draconis;
     padding: 0;
@@ -284,6 +272,18 @@ div {
 
 .next {
     right: 20px;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(blocks) {
+    animation: fade 0.7s backwards both;
+}
+
+::view-transition-new(blocks) {
+    animation: fade 0.7s forwards both;
 }
 
 @media(max-width: 870px){
