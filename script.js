@@ -40,7 +40,6 @@ startAutoPlay(); // Запускаем автопрокрутку
 slider.mouseenter(stopAutoPlay); // Остановка при наведении мыши
 slider.mouseleave(startAutoPlay); // Возобновление при уходе мыши
 
-slide.click(() => {
+/* slide.click(() => {
     this.css("")
-});
-
+}); */
