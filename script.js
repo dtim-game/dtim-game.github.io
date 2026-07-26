@@ -1,45 +1,46 @@
-// Находим контейнер со слайдами
-    var slides = $('.gallery .scroll');
-    var slideCount = $('.gallery img').length; // Количество слайдов
-    var prevButton = $('.gallery .back');
-    var nextButton = $('.next');
-    var slider = $('.gallery');
+var slides = $('.gallery .scroll');
+var slideCount = $('.gallery img').length; // Количество слайдов
+var prevButton = $('.gallery .back');
+var nextButton = $('.next');
+var slider = $('.gallery');
+var slide = $('.gallery img')
 
-    let currentIndex = 0; // Текущий индекс слайда
-    let autoPlayInterval; // Интервал для автопрокрутки
+let currentIndex = 0; // Текущий индекс слайда
+let autoPlayInterval; // Интервал для автопрокрутки
 
-    /**
-     * Функция смены слайда.
-     * @param {number} index - Индекс слайда, на который нужно перейти.
-     */
-    function goToSlide(index) {
-        if (index < 0) {
-            index = slideCount - 1; // Если нажали "Назад" на первом слайде, переходим к последнему
-        } else if (index >= slideCount) {
-            index = 0; // Если нажали "Вперед" на последнем слайде, переходим к первому
-        }
-        currentIndex = index;
-        slides.css("transform", `translateX(${-index * 100}%)`); // Смещение слайдов
+/**
+ * Функция смены слайда.
+ * @param {number} index - Индекс слайда, на который нужно перейти.
+ */
+function goToSlide(index) {
+    if (index < 0) {
+        index = slideCount - 1; // Если нажали "Назад" на первом слайде, переходим к последнему
+    } else if (index >= slideCount) {
+        index = 0; // Если нажали "Вперед" на последнем слайде, переходим к первому
     }
+    currentIndex = index;
+    slides.css("transform", `translateX(${-index * 100}%)`); // Смещение слайдов
+}
 
-    // Обработчики кликов для кнопок
-    prevButton.click(() => goToSlide(currentIndex - 1));
-    nextButton.click(() => goToSlide(currentIndex + 1));
+// Обработчики кликов для кнопок
+prevButton.click(() => goToSlide(currentIndex - 1));
+nextButton.click(() => goToSlide(currentIndex + 1));
 
-    /**
-     * Запускает автоматическую прокрутку слайдов.
-     */
-    function startAutoPlay() {
-        autoPlayInterval = setInterval(() => goToSlide(currentIndex + 1), 3000);
-    }
+// Запускает автоматическую прокрутку слайдов.
+function startAutoPlay() {
+    autoPlayInterval = setInterval(() => goToSlide(currentIndex + 1), 3000);
+}
 
-    /**
-     * Останавливает автоматическую прокрутку.
-     */
-    function stopAutoPlay() {
-        clearInterval(autoPlayInterval);
-    }
+// Останавливает автоматическую прокрутку.
+function stopAutoPlay() {
+    clearInterval(autoPlayInterval);
+}
 
-    startAutoPlay(); // Запускаем автопрокрутку
-    slider.mouseenter(stopAutoPlay); // Остановка при наведении мыши
-    slider.mouseleave(startAutoPlay); // Возобновление при уходе мыши
+startAutoPlay(); // Запускаем автопрокрутку
+slider.mouseenter(stopAutoPlay); // Остановка при наведении мыши
+slider.mouseleave(startAutoPlay); // Возобновление при уходе мыши
+
+slide.click(() => {
+    this.css("")
+});
+
